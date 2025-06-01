@@ -1,1 +1,30 @@
+>> Python Visualization Documentation
+
+There are many visualisation libraries in python and i had pretty much to choose in so I opted the following as they are widely used in today's world!!! 
+1.Matplotlib
+2. Seaborn
+Now coming to the first choosen one.
+
+1. Matplotlib
+
+Matplotlib is a low-level, flexible 2D plotting library in Python. It allows the creation of static, animated, and interactive plots and is often used as the foundation for other visualization libraries.
+The "Installation" is pretty much easy we just have to note it down for a quick reference.
+"pip install matplotlib" and this is it..
+A few common plot types are here
+  Line plot
+  Bar Graph
+  Histogram 
+  Scatter plot
+  Pie Chart
+while we have gone through the rough sketch of matplotlib and its plot types, this basic structure of matplotlib can clear mist in our brains.
+
+import matplotlib.pyplot as plt
+# the importing section that we noted down.
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+plt.plot(x, y)
+plt.title("Line Plot")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
 
