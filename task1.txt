@@ -1,30 +1,110 @@
 >> Python Visualization Documentation
 
-There are many visualisation libraries in python and i had pretty much to choose in so I opted the following as they are widely used in today's world!!! 
-1.Matplotlib
-2. Seaborn
-Now coming to the first choosen one.
+  There are many visualisation libraries in python and i had pretty much to choose     in so I opted the following as they are widely used in today's world!!! 
+      1.Matplotlib
+      2. Seaborn
+    Now coming to the first choosen one.
 
-1. Matplotlib
+        >> 1. Matplotlib
 
-Matplotlib is a low-level, flexible 2D plotting library in Python. It allows the creation of static, animated, and interactive plots and is often used as the foundation for other visualization libraries.
-The "Installation" is pretty much easy we just have to note it down for a quick reference.
-"pip install matplotlib" and this is it..
-A few common plot types are here
-  Line plot
-  Bar Graph
-  Histogram 
-  Scatter plot
-  Pie Chart
-while we have gone through the rough sketch of matplotlib and its plot types, this basic structure of matplotlib can clear mist in our brains.
+        Matplotlib is a low-level, flexible 2D plotting library in Python. It allows the creation of static, animated, and interactive plots and is often used as the foundation for other             visualization libraries.
 
-import matplotlib.pyplot as plt
-# the importing section that we noted down.
-x = [1, 2, 3, 4]
-y = [10, 20, 25, 30]
-plt.plot(x, y)
-plt.title("Line Plot")
-plt.xlabel("X Axis")
-plt.ylabel("Y Axis")
-plt.show()
+            Its Unique Features are
+                Customisable
+                Enables 3D plotting
+                Animation Support
+                Latex Formatting
 
+            The "Installation" is pretty much easy we just have to note it down for a quick reference.
+            "pip install matplotlib" and this is it..
+            A few common plot types are here
+                Line plot
+                Bar Graph
+                Histogram 
+                Scatter plot
+                Pie Chart
+                Box plot
+
+            while we have gone through the rough sketch of matplotlib and its plot types, this basic structure of matplotlib can clear mist in our brains.
+            
+            import matplotlib.pyplot as plt
+            # the importing section that we noted down.
+            x = [1, 2, 3, 4]
+            y = [10, 20, 25, 30]
+            plt.plot(x, y)
+            plt.title("Line Plot")
+            plt.xlabel("X Axis")
+            plt.ylabel("Y Axis")
+            plt.show()
+
+      >> 2. Seaborn
+
+      Seaborn is built on top of Matplotlib and focuses on statistical data visualization. It provides beautiful default styles and easier ways to create complex plots.
+      
+          Its unique features Unique Features:
+              Built-in themes and color palettes             
+              Integration with Pandas DataFrames
+              Includes statistical plots like box plots, violin plots, and heatmaps
+      
+As we now know what a matplotlib and seaborn is and so the common plotting types, let us now learn how the plotting in both libraries is done.
+First comes the basic of all, that is
+
+   >> i. Line plot
+
+      using matplotlib:
+        import matplotlib.pyplot as plt
+        x = [1, 2, 3]
+        y = [10, 20, 15]
+        plt.plot(x, y)
+        plt.show()
+
+      using seaborn:
+        import seaborn as sns
+        import pandas as pd
+        df = pd.DataFrame({'x': [1, 2, 3], 'y': [10, 20, 15]})
+        sns.lineplot(data=df, x='x', y='y')
+
+   >> ii. Scatter plot
+    
+      using matplotlib:
+        plt.scatter([1, 2, 3], [4, 5, 6])
+        plt.show()
+      
+      using seaborn:
+        sns.scatterplot(x='x', y='y', data=df)
+  
+   >> iii. Bar Graph
+    
+      using matplotlib:
+        plt.bar(['A', 'B', 'C'], [10, 20, 15])
+        plt.show()
+    
+      using seaborn:
+        df = pd.DataFrame({'category': ['A', 'B', 'C'], 'value': [10, 20, 15]})
+        sns.barplot(x='category', y='value', data=df)
+
+   >> iv. Histogram
+    
+      using matplotlib:
+        plt.hist([1, 2, 2, 3, 3, 3, 4])
+        plt.show()
+      
+      using seaborn:
+        sns.histplot([1, 2, 2, 3, 3, 3, 4], bins=4)
+
+   >> v. Pie chart
+
+      using matplotlib:
+        plt.pie([30, 40, 30], labels=['A', 'B', 'C'], autopct='%1.1f%%')
+        plt.show()
+
+>> Comparision between Matplotlib and seaborn
+
+          Matplotlib                         Seaborn
+    more code, more manual setup         less code
+    very detailed control                limited control
+    Good for large datasets              slower on large datasets
+    great with Numpy, Pandas             great with Pandas
+    basic styles                         prettier styles 
+
+      
